@@ -1,6 +1,6 @@
 <template>
     <div class="bg-red-500">
-        <bingo-board />
+        <bingo-row />
     </div>
 </template>
 
@@ -8,9 +8,9 @@
 <script>
 import { defineAsyncComponent } from "vue";
 export default {
-    name: 'HomeView',
+    name: 'BingoBoard',
     components: {
-        BingoBoard: defineAsyncComponent(() => import("@/modules/BingoBoard/views/BingoBoard.vue")),
+        BingoRow: defineAsyncComponent(() => import("@/modules/BingoRow/views/BingoRow.vue")),
     },
     setup() {
 
