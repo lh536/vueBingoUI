@@ -1,27 +1,35 @@
 <template>
-    <img alt="Vue logo" class="logo mx-auto py-12" src="@/assets/logo.svg" width="125" height="125" />
-    <!-- <home-view /> -->
-    <header>
-        <nav class="text-center space-x-6 pt-2">
-            <router-link class="px-4 py-2 rounded-xl border-2 hover:bg-slate-600 hover:text-slate-200" to="/">Home</router-link>
-            <router-link class="px-4 py-2 rounded-xl border-2 hover:bg-slate-600 hover:text-slate-200" to="/about">About</router-link>
-        </nav>
-    </header>
-    <router-view />
-
+    <div class="">
+        <div class="grid place-items-center min-h-screen landscape:hidden text-center text-2xl">
+            <div>
+                <p>This application was designed to viewed on landscape mode.</p>
+                <p>Please rotate your device.</p>
+                <p>Sorry for the inconvenience</p>
+            </div>
+            <div>
+                <p>Esta aplicación fue diseñada para ser vista en modo apaisado.</p>
+                <p>Por favor rote su dispositivo</p>
+                <p>Discúlpe por el inconveniente</p>
+            </div>
+        </div>
+        <div class="portrait:hidden">
+            <home-view />
+        </div>
+    </div>
 </template>
 
 
 <script>
-import { RouterLink, RouterView } from "vue-router"
-import { defineAsyncComponent } from "vue"
-
-  export default {
+import { defineAsyncComponent } from "vue";
+export default {
     name: 'App',
     components: {
-        HomeView: defineAsyncComponent( () => import ('@/views/HomeView.vue') ),
+        HomeView: defineAsyncComponent(() => import("@/views/HomeView.vue")),
     },
-  }
+    setup() {
+
+    }
+}
 
 </script>
 
