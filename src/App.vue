@@ -6,11 +6,11 @@
                 <p>Please rotate your device.</p>
                 <p>Sorry for the inconvenience</p>
             </div>
-            <dvi>
+            <div>
                 <p>Esta aplicación fue diseñada para ser vista en modo apaisado.</p>
                 <p>Por favor rote su dispositivo</p>
                 <p>Discúlpe por el inconveniente</p>
-            </dvi>
+            </div>
         </div>
         <div class="portrait:hidden">
             <home-view />
