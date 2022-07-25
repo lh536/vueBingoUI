@@ -1,11 +1,11 @@
 <template>
-    <button @click="toSelectBall" class="ball"
-            :class="selectedBall ? {
-                'roseBLetter': ball <= 15,
-                'skyILetter': ball >= 16 && ball <= 30,
-                'amberNLetter': ball >= 31 && ball <= 45,
-                'emeraldGLetter': ball >= 46 && ball <= 60,
-                'violetOLetter': ball >= 61 && ball <= 75,
+    <button @click="isSelectedBall = !isSelectedBall" class="ball"
+            :class="isSelectedBall ? {
+                'roseBBallSelected': ball <= 15,
+                'skyIBallSelected': ball >= 16 && ball <= 30,
+                'amberNBallSelected': ball >= 31 && ball <= 45,
+                'emeraldGBallSelected': ball >= 46 && ball <= 60,
+                'violetOBallSelected': ball >= 61 && ball <= 75,
             } : 'bg-black'" >{{ball}}</button>
 </template>
 
@@ -22,14 +22,9 @@ export default {
     },
 
     setup() {
-        const selectedBall = ref(false)
+        const isSelectedBall = ref(false)
 
-        const toSelectBall = () => {
-            console.log(selectedBall.value)
-            selectedBall.value = !selectedBall.value
-        }
-
-        return { selectedBall, toSelectBall }
+        return { isSelectedBall }
 
     }
 }
