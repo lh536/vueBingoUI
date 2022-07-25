@@ -44,35 +44,35 @@ export default {
 }
 
 .roseBNumber {
-    @apply hover:bg-rose-500 border-rose-300 font-semibold hover:text-rose-200;
+    @apply lg:hover:bg-rose-500 border-rose-300 font-semibold lg:hover:text-rose-200;
 }
 .skyILetter {
     @apply bg-sky-500 border-sky-300 text-sky-200 font-semibold;
 }
 
 .skyINumber {
-    @apply hover:bg-sky-500 border-sky-300 font-semibold hover:text-sky-200;
+    @apply lg:hover:bg-sky-500 border-sky-300 font-semibold lg:hover:text-sky-200;
 }
 .amberNLetter {
     @apply bg-amber-500 border-amber-300 text-amber-200 font-semibold;
 }
 
 .amberNNumber {
-    @apply hover:bg-amber-500 border-amber-300 font-semibold hover:text-amber-200;
+    @apply lg:hover:bg-amber-500 border-amber-300 font-semibold lg:hover:text-amber-200;
 }
 .emeraldGLetter {
     @apply bg-emerald-500 border-emerald-300 text-emerald-200 font-semibold;
 }
 
 .emeraldGNumber {
-    @apply hover:bg-emerald-500 border-emerald-300 font-semibold hover:text-emerald-200;
+    @apply lg:hover:bg-emerald-500 border-emerald-300 font-semibold lg:hover:text-emerald-200;
 }
 .violetOLetter {
     @apply bg-violet-500 border-violet-300 text-violet-200 font-semibold;
 }
 
 .violetONumber {
-    @apply hover:bg-violet-500 border-violet-300 font-semibold hover:text-violet-200;
+    @apply lg:hover:bg-violet-500 border-violet-300 font-semibold lg:hover:text-violet-200;
 }
 
 </style>
