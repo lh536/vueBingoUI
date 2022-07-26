@@ -20,6 +20,6 @@ export default {
 </script>
 
 
-<style scopped>
+<style scoped>
 
 </style>
