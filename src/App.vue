@@ -1,3 +1,8 @@
+<script setup>
+import HomeView from '@/views/HomeView.vue'
+</script>
+
+
 <template>
     <div class="">
         <div class="grid place-items-center min-h-screen landscape:hidden text-center text-2xl">
@@ -17,23 +22,3 @@
         </div>
     </div>
 </template>
-
-
-<script>
-import { defineAsyncComponent } from "vue";
-export default {
-    name: 'App',
-    components: {
-        HomeView: defineAsyncComponent(() => import("@/views/HomeView.vue")),
-    },
-    setup() {
-
-    }
-}
-
-</script>
-
-
-<style>
-
-</style>

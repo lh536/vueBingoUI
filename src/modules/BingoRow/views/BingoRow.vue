@@ -1,6 +1,19 @@
+<script setup>
+import BingoBall from "@/modules/BingoRow/components/BingoBall.vue";
+
+const props = defineProps ({
+    arrLetterNumber: {
+            type: Array,
+            required: true
+        }
+})
+
+</script>
+
+
 <template>
     <div class="flex justify-between items-center w-full gap-0.5 md:gap-0">
-        <bingo-ball v-for="letterNumber in arrLetterNumber" :ball="letterNumber"
+        <bingo-ball v-for="letterNumber in arrLetterNumber" :key="letterNumber" :ball="letterNumber"
         :class="{
             'roseBBallSelected': letterNumber === 'B',
             'roseBNumber': letterNumber <= 15,
@@ -17,27 +30,43 @@
 </template>
 
 
-<script>
-import { defineAsyncComponent } from "vue";
-export default {
-    name: 'BingoRow',
-    components: {
-        BingoBall: defineAsyncComponent(() => import("@/modules/BingoRow/components/BingoBall.vue")),
-    },
-    props: {
-        arrLetterNumber: {
-            type: Array,
-            required: true
-        }
-    },
-    setup() {
+<style scoped>
 
-    }
+.roseBBallSelected {
+    @apply bg-rose-500 border-rose-300 text-rose-200 font-semibold;
 }
 
-</script>
+.roseBNumber {
+    @apply lg:hover:bg-rose-500 border-rose-300 font-semibold lg:hover:text-rose-200;
+}
+.skyIBallSelected {
+    @apply bg-sky-500 border-sky-300 text-sky-200 font-semibold;
+}
 
+.skyINumber {
+    @apply lg:hover:bg-sky-500 border-sky-300 font-semibold lg:hover:text-sky-200;
+}
+.amberNBallSelected {
+    @apply bg-amber-500 border-amber-300 text-amber-200 font-semibold;
+}
 
-<style>
+.amberNNumber {
+    @apply lg:hover:bg-amber-500 border-amber-300 font-semibold lg:hover:text-amber-200;
+}
+.emeraldGBallSelected {
+    @apply bg-emerald-500 border-emerald-300 text-emerald-200 font-semibold;
+}
+
+.emeraldGNumber {
+    @apply lg:hover:bg-emerald-500 border-emerald-300 font-semibold lg:hover:text-emerald-200;
+}
+
+.violetOBallSelected {
+    @apply bg-violet-500 border-violet-300 text-violet-200 font-semibold;
+}
+
+.violetONumber {
+    @apply lg:hover:bg-violet-500 border-violet-300 font-semibold lg:hover:text-violet-200;
+}
 
 </style>

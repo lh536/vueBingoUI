@@ -1,19 +1,13 @@
-<template>
-    <div class="bg-red-500">
-        AboutView
-    </div>
-</template>
-
-
-<script>
-export default {
-    name: 'AboutView',
-    setup() {
-
-    }
-}
+<script setup>
 
 </script>
+
+
+<template>
+    <div class="bg-red-500">
+        About
+    </div>
+</template>
 
 
 <style scoped>
